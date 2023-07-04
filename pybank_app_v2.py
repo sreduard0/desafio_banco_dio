@@ -6,6 +6,8 @@ from datetime import datetime
 logado = False
 close = ''
 usuario = []
+AGENCIA = 3378
+CONTA = 2525
 def screen_clear():
     os.system('cls' if os.name == 'nt' else 'clear')
     
@@ -209,7 +211,7 @@ def logout():
 def select_action(action):    
     match (action):
         case '1':  
-            saque()    
+            saque() 
         case '2': 
             deposito()
         case '3': 
@@ -223,7 +225,11 @@ while close == "":
     login()
     screen_clear()
     print("=============================================")
-    print("############ Olá, "+usuario[1] +" ###########")
+    print("################ Olá, "+usuario[1] +" ###############")
+    print("# AGENCIA: "+str(AGENCIA)+"-9                           #")
+    print("# CONTA: "+str(CONTA)+"-9                             #")
+    print("#############################################")
+    print("\n")
     print(" 1 - SACAR                                   ")
     print(" 2 - DEPOSITAR                               ")
     print(" 3 - EXTRATO                                 ")
