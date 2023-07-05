@@ -129,7 +129,7 @@ class BankApp:
             print("=============================================")
             print("                  CADASTRO                   ")
             print("=============================================")
-            with open("DB_USERS_BANK.json", "r") as usuarios:
+            with open("./DB_USERS_BANK.json", "r") as usuarios:
                 data = json.load(usuarios)
 
             nome = input("Digite seu nome completo: ")
@@ -153,7 +153,7 @@ class BankApp:
                 print("Sua senha é menor que 4 dígitos.")
                 senha = input("Digite novamente: ")
 
-            with open("DB_USERS_BANK.json", "w") as usuarios:
+            with open("./DB_USERS_BANK.json", "w") as usuarios:
                 data[login] = [login, senha, nome.upper()]
                 json.dump(data, usuarios)
 
